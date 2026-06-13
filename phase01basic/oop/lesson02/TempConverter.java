@@ -10,7 +10,9 @@ public class TempConverter {
         Scanner sc = new Scanner(System.in);
         System.out.print("請輸入攝氏溫度（°C）：");
         double celsius = sc.nextDouble();
+       
         double fahrenheit = celsius * FACTOR + OFFSET;
+       
         System.out.printf("華氏溫度：%.2f °F%n", fahrenheit);
         System.out.printf("驗算回攝氏：%.2f °C%n", (fahrenheit - OFFSET) * 5.0 / 9.0);
         sc.close();

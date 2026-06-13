@@ -1,4 +1,4 @@
-package phase01basic.oop.lesson02;
+package phase01basic.oop.lesson03;
 
 import java.util.Scanner;
 
