@@ -1,6 +1,9 @@
+import java.util.Arrays;
+
 public class BubbleSort {
 
     public static void doSort(int[] arr) {
+        int count = 0; // 用來記錄經過多少回合
         int n = arr.length;
         // 外層迴圈：控制總共要做幾輪
         for (int i = 0; i < n - 1; i++) {
@@ -12,6 +15,7 @@ public class BubbleSort {
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
+                System.out.printf("第%d輪比較, --> %s%n", ++count, Arrays.toString(arr));
             }
         }
     }
