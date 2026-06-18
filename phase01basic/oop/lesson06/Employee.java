@@ -1,3 +1,5 @@
+package phase01basic.oop.lesson06;
+
 public class Employee {
     private String empId, name, department;
     private double salary;

@@ -2,6 +2,7 @@ package phase01basic.oop.lesson03;
 
 public class MultiplicationTable {
     public static void main(String[] args) {
+        
         for (int i = 1; i <= 9; i++) {
             for (int j = 1; j <= 9; j++) {
                 System.out.printf("%d*%d=%-4d", i, j, i * j); // %-4d 十進位整數，靠左對齊，最小欄位寬度4, 若整數長度不足4位數，會在右側補上空白字元

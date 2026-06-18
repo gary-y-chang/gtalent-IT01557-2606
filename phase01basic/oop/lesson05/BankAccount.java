@@ -1,3 +1,5 @@
+package phase01basic.oop.lesson05;
+
 public class BankAccount {
     private String owner;
     private double balance;

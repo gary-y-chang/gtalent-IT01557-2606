@@ -1,0 +1,8 @@
+為什麼會亂碼？
+網路傳輸的本質只有「位元（Byte）」。文字轉位元叫編碼（Encode），位元轉文字叫解碼（Decode）。
+如果發送端用 UTF-8 編碼，接收端用 Big5 解碼，就會產生亂碼。
+解決方案：永遠不要依賴系統預設值（System.getProperty("file.encoding")）。跨平台、跨網路通訊時，強制統一使用 StandardCharsets.UTF_8
+
+Windows 繁體中文版的 cmd 預設編碼是 MS950 (Big5)，它無法正確顯示 Java 送出的 UTF-8 中文字
+solution:
+在 cmd 視窗中執行 Java 程式之前，先輸入以下指令切換編碼：

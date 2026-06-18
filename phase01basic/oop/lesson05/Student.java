@@ -1,3 +1,5 @@
+package phase01basic.oop.lesson05;
+
 public class Student {
     String name;  int id;  double score;
     static int totalCount = 0; // 進階：記錄總人數
@@ -17,7 +19,9 @@ public class Student {
     public static void main(String[] args) {
         Student s1 = new Student("小明", 101, 85.0);
         s1.showInfo();        // 姓名:小明 學號:101 成績:85.0
+        s1.totalCount = 100; // 錯誤！應該用 Student.totalCount, 因為 totalCount 是類別層級的變數，不是物件層級的
         var pass = s1.isPass();          // true
-        int count = Student.totalCount;  // 1
+        int count = Student.totalCount;  // 原本應是 1
+        System.out.println("總人數: " + count); // 總人數: 100 (錯誤！因為 totalCount 被 s1.totalCount 改成了 100)
     }
 }

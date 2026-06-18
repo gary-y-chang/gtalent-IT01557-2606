@@ -1,3 +1,5 @@
+package phase01basic.oop.lesson05;
+
 /**
  * Lesson 05 — Lab 03 參考解答 Enum 列舉：TrafficLight 紅綠燈
  */

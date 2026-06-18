@@ -19,6 +19,7 @@ public class GuessGame {
             else if (guess < answer)
                 System.out.println("太小");
         } while (guess != answer);
+        
         System.out.printf("答對了！共猜 %d 次%n", count);
         sc.close();
     }

@@ -1,3 +1,5 @@
+package phase01basic.oop.lesson06;
+
 public class Car {
     private String brand;
     private int    year;

@@ -1,3 +1,5 @@
+package phase01basic.oop.lesson06;
+
 // Lab 03 — Car Record（參考解答）
 // Lesson 06：封裝、建構子與 this
 // Java 16+：將 JavaBean 改寫為 record（30 行 → 10 行）
