@@ -6,11 +6,11 @@ from the project root using the fully-qualified class name.
 ### compile the source java code
 ```console
 >cd /path/to/project/root
->javac phase01basic/oop/lesson01/HelloWorld.java
+>javac -d bin phase01basic/oop/lesson06/Runner.java
 ```
 
 ### execute the class file
 ```console
 >cd /path/to/project/root
->java -cp . phase01basic.oop.lesson01.HelloWorld
+>java -cp bin phase01basic.oop.lesson06.Runner
 ```
