@@ -6,7 +6,9 @@ package phase01basic.oop.lesson05;
 public enum TrafficLight {
 
     // 定義三個常數，傳入中文名稱與亮燈秒數
-    STOP("紅燈", 30), CAUTION("黃燈", 5), GO("綠燈", 25);
+    STOP("紅燈", 30), 
+    CAUTION("黃燈", 5), 
+    GO("綠燈", 25);
 
     // 自訂欄位
     private final String label;

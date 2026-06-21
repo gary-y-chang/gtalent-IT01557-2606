@@ -9,6 +9,7 @@ public class BubbleSort {
         int n = arr.length;
         // 外層迴圈：控制總共要做幾輪
         for (int i = 0; i < n - 1; i++) {
+            System.out.printf("外圈第%d輪開始, --> %s%n", i + 1, Arrays.toString(arr));
             // 內層迴圈：兩兩比較。因為每做完一輪，後面就有一個數字固定了，所以可以少比較 i 個數字
             for (int j = 0; j < n - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -16,8 +17,8 @@ public class BubbleSort {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+                    System.out.printf("內圈第%d輪比較, --> %s%n", ++count, Arrays.toString(arr));
                 }
-                System.out.printf("第%d輪比較, --> %s%n", ++count, Arrays.toString(arr));
             }
         }
     }
