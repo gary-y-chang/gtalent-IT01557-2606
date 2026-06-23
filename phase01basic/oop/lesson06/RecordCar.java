@@ -7,7 +7,6 @@ package phase01basic.oop.lesson06;
 public record RecordCar(String brand, int year, double price) {
 
     // 緊湊型建構子（Compact Constructor）— 只做驗證
-    // JVM 自動完成 this.brand = brand; this.year = year; this.price = price;
     public RecordCar {
         if (year < 1886)
             throw new IllegalArgumentException("年份無效");
@@ -15,4 +14,8 @@ public record RecordCar(String brand, int year, double price) {
             throw new IllegalArgumentException("價格不能為負");
     }
 
+    // 手動新增無參數建構子
+    public RecordCar() {
+        this("Unknown", 2024, 0.0);
+    }
 }

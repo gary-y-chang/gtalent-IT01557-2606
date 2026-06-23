@@ -5,18 +5,27 @@ public class Car {
     private int    year;
     private double price;
 
+
     public Car(String brand, int year, double price) {
         this.brand = brand;
-        setYear(year);  setPrice(price);
+        this.setYear(year);  
+        this.setPrice(price);
     }
 
     public String getBrand() { return brand; }
-    public void   setBrand(String b) { this.brand = b; }
+    public void   setBrand(String b) { 
+        this.brand = b; 
+    }
 
-    public int  getYear() { return year; }
+    public int  getYear() {
+         return year; 
+    }
+
     public void setYear(int y) {
-        if (y >= 1886) this.year = y;
-        else System.out.println("❌ 年份無效");
+        if (y >= 1886) 
+            this.year = y;
+        else 
+            System.out.println("❌ 年份無效");
     }
 
     public double getPrice() { return price; }
@@ -25,10 +34,10 @@ public class Car {
         else System.out.println("❌ 價格不能為負");
     }
 
-    @Override
-    public String toString() {
-        return "Car{brand=" + brand
-            + ", year=" + year
-            + ", price=" + price + "}";
-    }
+    // @Override
+    // public String toString() {
+    //     return "Car{brand=" + brand
+    //         + ", year=" + year
+    //         + ", price=" + price + "}";
+    // }
 }
