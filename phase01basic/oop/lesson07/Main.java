@@ -11,6 +11,7 @@ public class Main {
         System.out.println(a.equals(b)); // true
 
         Set<Product> set = new HashSet<>();
+        
         set.add(a);
         set.add(b);
         System.out.println(set.size()); // 1
