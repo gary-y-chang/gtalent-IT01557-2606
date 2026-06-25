@@ -1,3 +1,5 @@
+package phase01basic.oop.lesson11;
+
 import java.util.*;
 
 public class Lotto {
