@@ -1,0 +1,21 @@
+minikube delete --all --purge
+* Successfully deleted all profiles
+* Successfully purged minikube directory located at - [C:\Users\garyc\.minikube]
+* Kicbase images have not been deleted. To delete images run:
+  - docker rmi gcr.io/k8s-minikube/kicbase:v0.0.47
+
+docker pull calico/node:v3.30.0
+... and others calico images first
+
+Then, upload calico image to minikube
+
+minikube image load calico/cni:v3.30.0
+minikube image load calico/node:v3.30.0
+minikube image load calico/kube-controllers:v3.30.0  
+minikube image load calico/pod2daemon-flexvol:v3.30.0
+  
+minikube start --profile mkube-cluster --driver=docker --cpus=2 --nodes=3 --memory=no-limit  --disk-size=45g --cni=calico
+
+kubectl run alpine --image alpine --command sleep -- 999d 
+
+kubectl exec -ti alpine -- ash

@@ -1,7 +1,9 @@
 package phase01basic.oop.lesson08;
 
 public class Order implements OrderAction {
+
     private final String id;
+
     private OrderStatus status;
 
     public Order(String id) {
@@ -19,11 +21,28 @@ public class Order implements OrderAction {
         this.status = target;
     }
 
-    @Override public void pay()     { moveTo(OrderStatus.PAID); }
-    @Override public void ship()    { moveTo(OrderStatus.SHIPPED); }
-    @Override public void deliver() { moveTo(OrderStatus.DELIVERED); }
-    @Override public void cancel()  { moveTo(OrderStatus.CANCELLED); }
+    @Override
+    public void pay() {
+        moveTo(OrderStatus.PAID);
+    }
 
     @Override
-    public OrderStatus getStatus() { return status; }
+    public void ship() {
+        moveTo(OrderStatus.SHIPPED);
+    }
+
+    @Override
+    public void deliver() {
+        moveTo(OrderStatus.DELIVERED);
+    }
+
+    @Override
+    public void cancel() {
+        moveTo(OrderStatus.CANCELLED);
+    }
+
+    @Override
+    public OrderStatus getStatus() {
+        return status;
+    }
 }

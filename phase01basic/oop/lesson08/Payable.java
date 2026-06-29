@@ -1,6 +1,7 @@
 package phase01basic.oop.lesson08;
 
 public interface Payable {
+    
     boolean pay(double amount);
 
     String getMethodName();
