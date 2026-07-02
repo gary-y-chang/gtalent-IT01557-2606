@@ -21,6 +21,12 @@ public class StringDemo {
         sb.reverse();
         System.out.println(sb.toString()); // Output 6102 avaJ xuniL
 
+
+        // String s1 = "happy";   // null  空字串
+        // s1.isEmpty(); // false
+        // s1.length();  // 5
+
+
         // 判斷字串是否為空
         if (sb.toString().isEmpty()) {
             System.out.println("空白字串");
@@ -40,5 +46,12 @@ public class StringDemo {
         String msg = String.format("User %s runs Java %d with a score of %.2f", name, version, score);
         System.out.println(msg);
         // Output: User Alex runs Java 21 with a score of 98.46 (Rounded to 2 decimal places)
+
+        String names = "Alice,Bob,Carol|Dave";
+        String[] namesArray = names.split(",");
+        for (String n : namesArray) {
+            System.out.println(n);
+        }   
+
     }
 }

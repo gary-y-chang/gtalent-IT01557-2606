@@ -1,6 +1,7 @@
 package phase01basic.oop.lesson09;
 
-import java.time.LocalDate;
+import java.time.*;
+import java.time.temporal.ChronoUnit;
 
 public class DateDemo {
     public static void main(String[] args) {
@@ -20,5 +21,8 @@ public class DateDemo {
         System.out.println("生日：" + DateCalculator.format(birthday));
         System.out.println("年齡：" + DateCalculator.age(birthday) + " 歲");
         System.out.println("下次生日：" + DateCalculator.nextBirthday(birthday));
+
+        long year = ChronoUnit.YEARS.between(birthday, LocalDate.now());
+        System.out.println("年齡：" + year + " 年");
     }
 }
