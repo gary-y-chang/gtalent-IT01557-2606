@@ -5,8 +5,20 @@ import java.util.*;
 public class StudentComparators {
 
     // 依姓名升序
+    // public static final Comparator<Student>
+    //     BY_NAME = Comparator.comparing(Student::getName);
+
     public static final Comparator<Student>
-        BY_NAME = Comparator.comparing(Student::getName);
+        BY_NAME = new Comparator<Student>() {
+            @Override
+            public int compare(Student s1, Student s2) {
+                int i = s2.getName().compareTo(s1.getName());
+                System.out.println(i);
+                return i;
+                // return s2.getName().compareTo(s1.getName());
+                // return s1.getName().compareTo(s2.getName());
+            }
+        };  
 
     // 依學號升序
     public static final Comparator<Student>

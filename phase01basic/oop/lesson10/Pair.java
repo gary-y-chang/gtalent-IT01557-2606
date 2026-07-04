@@ -1,8 +1,9 @@
 package phase01basic.oop.lesson10;
 
 public class Pair<K, V> {
-    private final K first;
-    private final V second;
+    private  K first;
+    private  V second;
+
 
     // private 建構子：強制透過工廠方法建立
     private Pair(K first, V second) {
@@ -29,7 +30,10 @@ public class Pair<K, V> {
     }
 
     public static void main(String[] args) {
-        Pair<String, Integer> p = Pair.of("Alice", 95);
+
+        // Pair<String, Integer> p = Pair.of("Alice", 95);
+        Pair<String, Integer> p = new Pair<String,Integer>("Alice", 95);
+        
         System.out.println(p);           // (Alice, 95)
         System.out.println(p.getFirst()); // Alice
         System.out.println(p.getSecond()); // 95
@@ -37,5 +41,12 @@ public class Pair<K, V> {
 
         var list = java.util.List.of(Pair.of("Alice", 95), Pair.of("Bob", 88));
         list.forEach(System.out::println);
+
+    
+        // Box<Integer> box = new Box<>(42);
+        // Integer value = box.getValue();
+        // System.out.println(value.getClass());
+
+        // Box.printBox(Double.valueOf(33.65));
     }
 }

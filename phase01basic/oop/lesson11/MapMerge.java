@@ -20,6 +20,7 @@ public class MapMerge {
         // 換成 merge() 只要一行（使用方法參照 Integer::sum）
         // 如果 "Apple" 不存在，直接存入 1；如果存在，就把「舊值」加上「新值（1）
         counts.merge("Apple", 1, Integer::sum);
+        // Integer.sum(int a, int b) --> a + b
 
         Map<String, String> userRoles = new HashMap<>();
         userRoles.put("Alice", "ADMIN");

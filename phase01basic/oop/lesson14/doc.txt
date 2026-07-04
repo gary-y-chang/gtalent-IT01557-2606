@@ -6,3 +6,4 @@
 Windows 繁體中文版的 cmd 預設編碼是 MS950 (Big5)，它無法正確顯示 Java 送出的 UTF-8 中文字
 solution:
 在 cmd 視窗中執行 Java 程式之前，先輸入以下指令切換編碼：
+>chcp 65001
