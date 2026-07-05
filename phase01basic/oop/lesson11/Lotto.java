@@ -7,7 +7,8 @@ public class Lotto {
 
     public static Set<Integer> generate(int count, int max) {
         Set<Integer> nums = new HashSet<>();
-        while (nums.size() < count) nums.add(RND.nextInt(max) + 1); // 自動去重
+        while (nums.size() < count)
+            nums.add(RND.nextInt(max) + 1); // 自動去重
         return new TreeSet<>(nums); // 排序後回傳
     }
 
@@ -26,9 +27,8 @@ public class Lotto {
         System.out.println("開獎號碼：" + draw);
         for (int i = 0; i < tickets.size(); i++) {
             Set<Integer> cp = new HashSet<>(tickets.get(i)); // 複製
-            cp.retainAll(draw);                              // 取交集
-            System.out.printf("第 %d 注：對中 %d 顆%s%n",
-                i + 1, cp.size(), cp.size() == 6 ? " 🎉" : "");
+            cp.retainAll(draw); // 取交集
+            System.out.printf("第 %d 注：對中 %d 顆%s%n", i + 1, cp.size(), cp.size() == 6 ? " 🎉" : "");
         }
     }
 }

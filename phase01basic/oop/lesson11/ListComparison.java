@@ -9,21 +9,37 @@ public class ListComparison {
 
         // ---- 1. ArrayList 範例 ----
         // 底層是連續的陣列，適合頻繁讀取
-        List<String> arrayList = new ArrayList<>();
+        // List<String> arrayList = new ArrayList<>();
 
-        // 新增元素 (預設加到尾端)
-        arrayList.add("Apple");
-        arrayList.add("Banana");
-        arrayList.add("Cherry");
+        // // 新增元素 (預設加到尾端)
+        // arrayList.add("Apple"); // index = 0
+        // arrayList.add("Orange"); // index = 1
+        // arrayList.add("Pear"); // index = 2
+        // arrayList.add("Banana"); // index = 3
+        // arrayList.add("Cherry"); // index = 4
+        // System.out.println("ArrayList 目前內容: " + arrayList);
+        // // 輸出: [Apple, Orange, Pear, Banana, Cherry]
+        // arrayList.set(3, "Mango"); // index = 3, value = "Mango"
+        // System.out.println("ArrayList 目前內容: " + arrayList);
+        // // 輸出: [Apple, Orange, Pear, Mango, Cherry]
+        // arrayList.add(3, "Banana");
+        // System.out.println("ArrayList 目前內容: " + arrayList);
+        // // 輸出: [Apple, Orange, Pear, Banana, Mango, Cherry]
+        // arrayList.remove(2); // index = 2, value = "Pear"
+        
+        // arrayList.removeIf(fruit -> fruit.equals("Apple") || fruit.equals("Banana"));
+        // System.out.println(arrayList); 
+        
 
         // 隨機存取 (透過 Index 讀取速度極快)
-        String secondFruit = arrayList.get(1);
-        System.out.println("ArrayList 索引 1 的元素: " + secondFruit); // 輸出: Banana
+        // String secondFruit = arrayList.get(1);
+        // System.out.println("ArrayList 索引 1 的元素: " + secondFruit); // 輸出: Banana
 
         // ---- 2. LinkedList 範例 ----
         // 底層是節點與指標，適合頻繁在頭尾新增/刪除
         // 這裡改用 LinkedList 宣告，以便使用 Queue/Deque 的獨有方法
         LinkedList<String> linkedList = new LinkedList<>();
+        // List<String> linkedList = new LinkedList<>();
 
         linkedList.add("Apple");
         linkedList.add("Banana");
@@ -36,12 +52,15 @@ public class ListComparison {
         System.out.println("LinkedList 目前內容: " + linkedList);
         // 輸出: [Mango, Apple, Banana, Cherry, Orange]
 
-        // ---- 3. 效能對比操作演示 ----
+        linkedList.push("Peer"); // 插到最前面 as Stack
+        System.out.println("LinkedList 目前內容: " + linkedList);
 
-        // 缺點示範：ArrayList 在中間插入元素很慢（後面所有元素都要往後搬移）
-        arrayList.add(1, "Blueberry");
+        // // ---- 3. 效能對比操作演示 ----
 
-        // 缺點示範：LinkedList 讀取中間元素很慢（必須從頭或尾一個一個節點數過去）
-        String middleFruit = linkedList.get(2);
+        // // 缺點示範：ArrayList 在中間插入元素很慢（後面所有元素都要往後搬移）
+        // arrayList.add(1, "Blueberry");
+
+        // // 缺點示範：LinkedList 讀取中間元素很慢（必須從頭或尾一個一個節點數過去）
+        // String middleFruit = linkedList.get(2);
     }
 }
