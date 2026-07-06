@@ -1,3 +1,5 @@
+package phase01basic.oop.lesson12;
+
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -6,8 +8,11 @@ public class PredicateFilter {
     // 通用 filter 方法
     static List<Student> filter(List<Student> list, Predicate<Student> p) {
         List<Student> result = new ArrayList<>();
+        
         for (Student s : list)
-            if (p.test(s)) result.add(s);
+            if (p.test(s))
+                 result.add(s);
+                
         return result;
     }
 

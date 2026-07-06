@@ -1,3 +1,5 @@
+package phase01basic.oop.lesson12;
+
 import java.util.*;
 
 class Student {
