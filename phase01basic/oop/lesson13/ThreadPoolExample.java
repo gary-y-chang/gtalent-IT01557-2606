@@ -39,7 +39,7 @@ public class ThreadPoolExample {
             Future<Integer> futureResult2 = pool.submit(sumTask2);
 
             System.out.println("主執行緒：去做其他事情...");
-            Thread.sleep(500); // 模擬主執行緒在忙別的事
+            Thread.sleep(5000); // 模擬主執行緒在忙別的事
 
             System.out.println("主執行緒：準備獲取結果（若任務未完成，此處會阻塞等待）");
 
